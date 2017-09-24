@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="">{{this['_Label Text'].value}}</label>
+    <select class="form-control">
+        <option *ngFor="let option of this['_Dropdown Options'].value"
+                [ngValue]="option.value">
+            {{option.key}}
+        </option>
+    </select>
+</div>

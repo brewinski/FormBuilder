@@ -1,0 +1,338 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+/* styles for validation helpers */
+/*.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}*/
+
+.external {
+    position: relative
+}
+
+    .external::before {
+        position: absolute;
+        top:15px;
+        left:-15px;
+        font-family: "FontAwesome";
+        content: "\f1e6";
+    }
+
+.required input,
+.required select,
+.required textarea,
+.required button,
+.required h1,
+.required h2, 
+.required h3, 
+.required h4, 
+.required h5, 
+.required h6 {
+    border-left: 3px solid red;
+}
+
+.fillArea {
+    max-height: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.make-scrollable {
+    max-height: 775px;
+    min-height: 775px;
+    height: 775px;
+    overflow-y: scroll;
+}
+
+.make-scrollable-scroll {
+    overflow-y: scroll;
+}
+
+html,
+body {
+    height:100%;
+}
+
+.box-body {
+    padding: 0;
+}
+
+.control-hover div {
+    background-color: rgba(0,0,0, 0.02);
+    outline: 1px solid rgba(0,0,0, 0.1);
+        /*border: 1px solid */
+}
+
+
+/*----------------------------------------------**/
+.elessar-handle {
+    display: block;
+    background: black;
+    height: 100%;
+    width: 5px;
+    cursor: ew-resize;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+    .elessar-handle:first-child {
+        left: 0;
+    }
+
+    .elessar-handle:last-child {
+        right: 0;
+    }
+
+.elessar-vertical .elessar-handle {
+    height: 5px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    cursor: ns-resize;
+}
+
+    .elessar-vertical .elessar-handle:first-child {
+        top: 0;
+    }
+
+    .elessar-vertical .elessar-handle:last-child {
+        bottom: 0;
+    }
+
+.elessar-indicator {
+    position: absolute;
+    background: black;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 1px;
+    width: 2px;
+    height: 100%;
+    z-index: 15;
+}
+
+.elessar-vertical .elessar-indicator {
+    width: 100%;
+    height: 2px;
+}
+
+.elessar-range {
+    position: absolute;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: blue;
+    width: 0;
+    z-index: 10;
+    height:100%;
+}
+
+.elessar-vertical .elessar-range {
+    width: auto;
+    height: 0;
+}
+
+.elessar-label {
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+    border-left: 1px solid #999;
+    padding-left: 10px;
+}
+
+.elessar-readonly {
+    opacity: 0.6;
+    cursor: default !important;
+}
+
+.elessar-phantom {
+    display:none;
+    background-color: transparent;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer !important;
+}
+
+.elessar-rangebar {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.elessar-delete-confirm {
+    background: red;
+}
+
+body.elessar-resizing, body.elessar-dragging {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    body.elessar-resizing,
+    body.elessar-resizing .bar,
+    body.elessar-resizing .handle {
+        cursor: ew-resize !important;
+    }
+
+        body.elessar-resizing.elessar-resizing-vertical,
+        body.elessar-resizing.elessar-resizing-vertical .bar,
+        body.elessar-resizing.elessar-resizing-vertical .handle {
+            cursor: ns-resize !important;
+        }
+
+    body.elessar-dragging,
+    body.elessar-dragging .bar,
+    body.elessar-dragging .handle {
+        cursor: move !important;
+        cursor: -webkit-grabbing !important;
+        cursor: -moz-grabbing !important;
+        cursor: grabbing !important;
+    }
+
+
+
+
+
+
+
+
+/*!
+ * jQuery UI Resizable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+.ui-resizable {
+    position: relative;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+    display: none;
+}
+
+.ui-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    width: 100%;
+    top: -5px;
+    left: 0;
+}
+
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%;
+}
+
+.ui-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    top: 0;
+    height: 100%;
+}
+
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.ui-resizable-sw {
+    cursor: sw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    bottom: -5px;
+}
+
+.ui-resizable-nw {
+    cursor: nw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    top: -5px;
+}
+
+.ui-resizable-ne {
+    cursor: ne-resize;
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -5px;
+}

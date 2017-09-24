@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div id="test" 
+         class="row builder-row ">
+        <div *ngFor="let Control of object.control; let i = index;" 
+             class="layout" 
+             (click)="setSelectedControl($event, Control)">
+            <ndc-dynamic [ndcDynamicComponent]="generateComponent(Control.controlTypeId, Control)" 
+                         [ndcDynamicInputs]="generateInput(Control, i)"
+                         [ndcDynamicOutputs]="generateOutputs()">
+            </ndc-dynamic>
+        </div>
+    </div>
+</div>

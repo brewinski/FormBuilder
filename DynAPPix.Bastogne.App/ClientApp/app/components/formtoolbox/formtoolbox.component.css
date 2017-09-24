@@ -1,0 +1,41 @@
+.sub-header {
+    position: relative;
+    max-height: 100px;
+    z-index: 1030;
+}
+
+.dynappix-control-box {
+    height: 45%;
+}
+
+.dynappix-hide-overflow {
+    overflow: hidden;
+}
+
+.dynappix-control-boxbody {
+    height: 89%;
+    overflow-y: scroll;
+}
+
+.dynappix-settings-boxbody {
+    height: 91%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.dynappix-settings-box {
+    height: 55%;
+    overflow: hidden;
+}
+
+.dynappix-minimise {
+    height: 45px;
+}
+
+.dynappix-settings-expand {
+    height: 94%
+}
+
+/*.dynappix-controls-expand {
+    height: 90%;
+}*/

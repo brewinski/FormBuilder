@@ -1,0 +1,7 @@
+﻿//Ssdafkn
+(function () {
+    'use strict';
+
+})();
+
+     

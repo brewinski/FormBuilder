@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>The World - @ViewBag.Title</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootswatch/yeti/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <a asp-controller="APP" asp-action="Index" class="navbar-brand">The World</a>
+            <ul class="nav navbar-nav navbar-right"></ul>
+        </div>
+    </nav>
+
+    <div id="sidebar" class="hide-sidebar">
+
+        <div style="min-width: 250px;">
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <img src="~/img/K2_smartformsBuilder_Badge.png" alt="User Profile Image" class="profileimage" />
+                <span id="username">@User.Identity.Name</span>
+            }
+            <ul class="nav">
+                <li class="active"><a asp-controller="App" asp-action="Index"><i class="fa fa-home fa-2x" aria-hidden="true"></i><span>Home</span></a></li>
+                <li><a asp-controller="App" asp-action="About"><i class="fa fa-question-circle fa-2x" aria-hidden="true"></i><span>About</span></a></li>
+                <li><a asp-controller="App" asp-action="Contact"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i><span>Contact</span></a></li>
+                <li><a asp-controller="Form" asp-action="FormBuilderNg"><i class="fa fa-html5 fa-2x" aria-hidden="true"></i><span>Angular Forms Builder</span></a></li>
+                <li><a asp-controller="Form" asp-action="FormBuilder"><i class="fa fa-coffee fa-2x" aria-hidden="true"></i><span>jQuery Form Builder</span></a></li>
+
+                
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-controller="Auth" asp-action="Logout"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i><span>Logout</span></a></li>
+                }
+                else
+                {
+                    <li><a asp-controller="Auth" asp-action="Login"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i><span>Login</span></a></li>
+                    <li><a asp-controller="Auth" asp-action="Signup"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i><span>Sign up</span></a></li>
+                }
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="main" class="container-fluid" ng-app="app-formbuilder">
+
+        @RenderBody()
+
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <h4 class="text-info text-center">&copy; 2015 The World Ltd.</h4>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Angular Imports -->
+    <!-- Packages -->
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="~/lib/angular-ui-sortable/src/sortable.js"></script>
+    <script src="~/lib/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+
+    <!-- Angular App -->
+    <script src="~/js/formbuilder/app-formbuilder.js"></script>
+
+    <!-- Services -->
+    <script src="~/js/formbuilder/services/app-FormData-Service.js"></script>
+    <script src="~/js/formbuilder/services/app-Event-Service.js"></script>
+
+
+    <!-- Directives -->
+    <script src="~/js/formbuilder/directives/ngform.js"></script>
+    <script src="~/js/formbuilder/directives/ngrow.js"></script>
+    <script src="~/js/formbuilder/directives/ngcolumn.js"></script>
+    <script src="~/js/formbuilder/directives/ngheadding.js"></script>
+    <script src="~/js/formbuilder/directives/ngtextbox.js"></script>
+    <script src="~/js/formbuilder/directives/ngitemgenerator.js"></script>
+    <script src="~/js/formbuilder/directives/ngsettingsrenderer.js"></script>
+
+    <!-- Controllers -->
+    <script src="~/js/formbuilder/controllers/app-FormBuilder-Controller.js"></script>
+    <script src="~/js/formbuilder/controllers/app-FormList-Controller.js"></script>
+
+    @RenderSection("scripts", false)
+</body>
+
+</html>

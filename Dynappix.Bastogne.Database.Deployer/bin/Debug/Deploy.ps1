@@ -1,0 +1,1 @@
+﻿& .\Dynappix.Bastogne.Database.Deployer.exe | Write-Host

@@ -1,0 +1,73 @@
+<!-- Main Header -->
+<!--<header class="form-header">-->
+
+	<!-- Header Navbar -->
+	<!--<nav class="navbar navbar-static-top" role="navigation">-->
+		<!-- Sidebar toggle button-->
+		<!--<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
+			role="button"> <span class="sr-only">Toggle navigation</span>
+		</a>
+        <ul  class="nav navbar-nav mr-auto d-md-down-none">
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['rules']" (click)="navigateToRules($event)">
+                    <i class="fa fa-code-fork"></i>
+                    <span> Rules</span>
+                </a>
+            </li>
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['tools']" (click)="navigateToToolbox($event)">
+                    <i class="fa fa-wrench"></i>
+                    <span>Tools</span>
+                </a>
+            </li>
+        </ul>-->
+
+		<!-- Navbar Right Menu -->
+		<!--<div class="navbar-custom-menu" style="float:right;">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/runtime/{{formId}}" target="_blank"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Runtime</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/report/{{formId}}" target="_blank"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a (click)="sendImplementationEmail();" class="nav-link"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Send For Implementation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="saveForm()"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home" (click)="deleteForm()"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+		</div>
+	</nav>-->
+    <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs pull-right">
+            <li class="nav-item"><a class="nav-link" href="/home" (click)="deleteForm()"><i class="fa fa-trash" aria-hidden="true"></i></a> </li>
+            <li class="nav-item"><a class="nav-link" (click)="saveForm()"><i class="fa fa-floppy-o" aria-hidden="true"></i></a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    Form Options <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li role="presentation" ><a href="/report/{{formId}}"  role="menuitem" tabindex="-1" >View Report</a></li>
+                    <li role="presentation"><a  href="/runtime/{{formId}}" role="menuitem" tabindex="-1" >Runtime</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a (click)="sendImplementationEmail();" role="menuitem" tabindex="-1">Send For Implementation</a></li>
+                </ul>
+            </li>
+            <li class=""[routerLinkActive]="['active']"><a href="#tab_2-2" [routerLink]="['rules']" (click)="navigateToRules($event)" data-toggle="tab" aria-expanded="false">Event Builder</a></li>
+            <li class="" [routerLinkActive]="['active']"><a href="#tab_1-1" [routerLink]="['tools']" (click)="navigateToToolbox($event)" data-toggle="tab" aria-expanded="true">Form Builder</a></li>
+            <li class="pull-left header"><i class="fa fa-wrench" aria-hidden="true"></i> {{heading}}</li>
+        </ul>
+
+    </div>
+<!--</header>-->
+

@@ -1,0 +1,46 @@
+﻿<ul dnd-list="object.control" 
+    class="{{object.settings.class}} col-md-12 builder-col">
+    <li dnd-draggable="control" 
+        dnd-moved="object.control.splice($index, 1)" 
+        ng-repeat="control in object.control | orderBy:control.id" 
+        ng-init="control.order = $index" 
+        ng-click="setFocusedObject(control); $event.stopPropagation();">
+        <dnd-nodrag class="drop-shadow">
+            <div dnd-handle class="handle">:::</div>
+        </dnd-nodrag>
+        <div item-generator
+             type="control.controlTypeId"
+             object="control"
+             controllist="controllist"
+             isbuilder="isbuilder">
+        </div>
+    </li>
+    <uib-accordion ng-if="isbuilder">
+        <div uib-accordion-group 
+             class="panel-default" 
+             is-open="status.open">
+            <uib-accordion-heading>Column Settings</uib-accordion-heading>
+            <form class="well">
+                <div class="form-group">
+                    <label>Class</label>
+                    <select name="Class" 
+                            class="form-control" 
+                            ng-model="object.settings.class">
+                        <option value="col-md-1">1</option>
+                        <option value="col-md-2">2</option>
+                        <option value="col-md-3">3</option>
+                        <option value="col-md-4">4</option>
+                        <option value="col-md-5">5</option>
+                        <option value="col-md-6">6</option>
+                        <option value="col-md-7">7</option>
+                        <option value="col-md-8">8</option>
+                        <option value="col-md-9">9</option>
+                        <option value="col-md-10">10</option>
+                        <option value="col-md-11">11</option>
+                        <option value="col-md-12">12</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </uib-accordion>
+</ul>

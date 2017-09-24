@@ -1,0 +1,18 @@
+<!--<div class="template make-scrollable-scroll"  style="color: #b8c7ce; height:30%;" >
+    <ng-template ad-host></ng-template> (click)="toggleMenu($event);"
+</div>-->
+
+<ul class="form-horizontal"
+    style="height: 50%;">
+    <li *ngFor="let group of groups" class="treeview active">
+        <a href="javascript:void(0)">
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+            <span>{{group.key}}</span>
+        </a>
+        <ul class="treeview-menu">
+            <li class="layout list-unstyled" style="padding:5px;">
+                <ng-template id="group.key" ad-host></ng-template>
+            </li>
+        </ul>
+    </li>
+</ul>

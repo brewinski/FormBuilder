@@ -1,0 +1,50 @@
+<aside class="toolbox fillArea" style="z-index: 10;">
+    <div class="box box-default dynappix-hide-overflow dynappix-control-box" 
+         [ngClass]="{'dynappix-minimise' : !controlsExpanded, 'dynappix-settings-expand' : !settingsExpanded && controlsExpanded}" >
+
+        <div class="box-header with-border">
+            <h3 class="box-title">Controls</h3>
+            <div class="box-tools">
+                <!-- This will cause the box to be removed when clicked -->
+                <!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
+                <!-- This will cause the box to collapse when clicked -->
+                <button class="btn btn-box-tool" 
+ 
+                        title="Collapse"
+                        (click)="toggleControlsCollapse();">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body dynappix-control-boxbody">
+            <form-controls (controlsLoaded)="_controlsLoaded = $event;"></form-controls>
+        </div>
+        <div *ngIf="!controlsLoaded" class="overlay">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+    </div>
+    <div class="box box-default dynappix-hide-overflow dynappix-settings-box" 
+         [ngClass]="{'dynappix-minimise' : !settingsExpanded, 'dynappix-settings-expand' : !controlsExpanded && settingsExpanded}" 
+         >
+
+        <div class="box-header with-border">
+            <h3 class="box-title">Settings</h3>
+            <div class="box-tools">
+                <!-- This will cause the box to be removed when clicked -->
+                <!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
+                <!-- This will cause the box to collapse when clicked -->
+                <button class="btn btn-box-tool" 
+                        
+                        title="Collapse"
+                        (click)="toggleSettingsCollapse();">
+                            <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body dynappix-settings-boxbody">
+            <form-settings></form-settings>
+        </div>
+    </div>
+</aside>

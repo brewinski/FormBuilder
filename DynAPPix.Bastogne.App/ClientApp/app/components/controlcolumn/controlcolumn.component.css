@@ -1,0 +1,23 @@
+.move-handle {
+    position: absolute;
+    left: 50%;
+    top: -5px;
+}
+
+.drag-left {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+
+.drag-right {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+}
+
+.ui-resizable-w {
+    height: 5px;
+    width:5px;
+    background-color: red;
+}

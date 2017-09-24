@@ -1,0 +1,9 @@
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\bin\Debug\netcoreapp1.1\Dynappix.Bastogne.API.deps.json
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\bin\Debug\netcoreapp1.1\Dynappix.Bastogne.API.runtimeconfig.json
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\bin\Debug\netcoreapp1.1\Dynappix.Bastogne.API.runtimeconfig.dev.json
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\bin\Debug\netcoreapp1.1\Dynappix.Bastogne.API.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\bin\Debug\netcoreapp1.1\Dynappix.Bastogne.API.pdb
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\obj\Debug\netcoreapp1.1\Dynappix.Bastogne.API.csprojResolveAssemblyReference.cache
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\obj\Debug\netcoreapp1.1\Dynappix.Bastogne.API.AssemblyInfo.cs
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\obj\Debug\netcoreapp1.1\Dynappix.Bastogne.API.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.API\obj\Debug\netcoreapp1.1\Dynappix.Bastogne.API.pdb

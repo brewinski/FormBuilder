@@ -1,0 +1,25 @@
+<p>Transfer the value of "<span *ngIf="ControlFrom; else makeselection">{{ControlFrom._settings._ControlName}}</span>" to "<span *ngIf="ControlTo; else makeselection">{{ControlTo._settings._ControlName}}</span>"</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-5">
+            <label>From: </label>
+            <select class="form-control" [(ngModel)]="ControlFrom" (blur)="setSettings()">
+                <option *ngFor="let control of availableControls"
+                        [ngValue]="control">
+                    {{control._settings._ControlName}}
+                </option>
+            </select>
+        </div>
+        <div class="col-sm-5">
+            <label>To: </label>
+            <select class="form-control" [(ngModel)]="ControlTo" (blur)="setSettings()">
+                <option *ngFor="let control of availableControls"
+                        [ngValue]="control">
+                    {{control._settings._ControlName}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<ng-template #makeselection>Please select a control</ng-template>

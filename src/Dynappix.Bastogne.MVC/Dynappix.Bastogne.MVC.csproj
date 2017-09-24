@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>Dynappix.Bastogne.MVC</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Dynappix.Bastogne.MVC</PackageId>
+    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\js\formbuilder\controllers\app-FormBuilder-Controller.js" />
+    <Content Include="wwwroot\js\formbuilder\controllers\app-FormList-Controller.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\app-formBuilder-formControlls.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ng-form\ngform.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ng-form\ng-form-1.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\ng-form\ng-form-1.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ng-form\ng-form.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngcolumn.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngform.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngheadding.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngitemgenerator.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngrow.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngsettingsrenderer.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\ngtextbox.js" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngcolumn.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngform.html">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngheadding.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngtextboxsettings.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngheaddingsettings.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngitemgenerator.html" />
+    <Content Include="wwwroot\js\formbuilder\directives\views\ngtextbox.html" />
+    <Content Include="wwwroot\js\formbuilder\services\app-Event-Service.js" />
+    <Content Include="wwwroot\js\formbuilder\services\app-FormData-Service.js" />
+    <Content Include="wwwroot\js\formbuilder\services\ngrow.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="wwwroot\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="4.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.0.0">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

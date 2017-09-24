@@ -1,0 +1,50 @@
+<!--<div style="padding: 5px;" *ngFor="let event of availableEvents">
+    <h5>When the form evecutes the "{{event.eventName}}" event.</h5>
+    <ul>
+        <li *ngFor="let rule of event.rule">
+            <ndc-dynamic [ndcDynamicComponent]="ComponentMap['TransferData']" 
+                         [ndcDynamicInputs]="generateInput(rule)">
+            </ndc-dynamic>
+        </li>
+    </ul>
+    <button (click)="addComponent(event)">add</button>
+    <button (click)="execute(event)">trigger rule</button>
+</div>-->
+
+<aside class="main-sidebar toolbox" style="z-index: 10;">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <div class="main-header">
+        <a class="logo toolbox-logo" href="/" routerlink="/" ng-reflect-router-link="/">
+            <span class="logo-mini"><b>FE</b></span>
+            <span class="logo-lg"><b>Form Events</b></span>
+        </a>
+    </div>
+    <section class="sidebar make-scrollable">
+        <ul *ngFor="let event of availableEvents" class="sidebar-menu ">
+            <li class="header">When {{event.eventName}} is triggered 
+                <button (click)="addComponent(event, ruleName)">add</button>
+                <button (click)="execute(event)">trigger rule</button>
+                <button (click)="removeEvent(event)">remove</button>
+                <input [(ngModel)]="ruleName" />
+            </li>
+            <li class="form-settings">
+                <ul class="sidebar-menu" *ngFor="let rule of event.rule">
+                    <li class="treeview active">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                            <span>{{rule.ruleName}}</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <ndc-dynamic [ndcDynamicComponent]="generateComponent(rule.ruleName)"
+                                         [ndcDynamicInputs]="generateInput(rule)">
+                            </ndc-dynamic>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>

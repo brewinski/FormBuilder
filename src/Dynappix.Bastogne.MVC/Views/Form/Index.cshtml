@@ -1,0 +1,40 @@
+@model IEnumerable<Dynappix.Bastogne.Models.PartialForm>
+@{
+    ViewBag.Title = "Forms";
+}
+@section scripts {
+
+}
+
+<div class="row" ng-controller="formListController as vm" ng-init="vm.init()">
+    <div class="col-md-5 col-md-offset-1" >
+        <h2>Forms</h2>
+        <ul ng-repeat="form in vm.forms">
+            <li class="bs-callout bs-callout-danger" ng-click="vm.setSelected(form)">
+                {{form.name}}
+            </li>
+        </ul>
+        <a asp-controller="Form" asp-action="FormBuilderNg" class="btn btn-default">Create Form</a>
+    </div>
+
+    <div class="col-md-5">
+        <h2>Form Information</h2>
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input ng-model="vm.selected.name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Runtime</label>
+                <a ng-href="@Url.Action("FormRuntime", "Form")/{{vm.selected.name}}" target="_blank" class="">
+                    @Url.Action("FormRuntime", "Form")/{{vm.selected.name}}
+                </a>
+            </div>
+            <div>
+                <a ng-href="@Url.Action("FormBuilderNG", "Form")/{{vm.selected.partialId}}" target="_blank" class="btn btn-warning">Edit</a>
+                <a ng-click="vm.DeleteForm(vm.selected.partialId, form)" class="btn btn-danger">Delete</a>
+            </div>
+        </form>
+    </div>
+
+</div>

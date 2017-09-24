@@ -1,0 +1,13 @@
+﻿    <div ng-switch
+         on="object.settings.type"
+         class="form-group">
+        <h1 class="form-control" ng-switch-default
+            style="color: lightgray;">Sample Headding</h1>
+        <h1 ng-switch-when="h1">{{object.settings.text}}</h1>
+        <h2 ng-switch-when="h2">{{object.settings.text}}</h2>
+        <h3 ng-switch-when="h3">{{object.settings.text}}</h3>
+        <h4 ng-switch-when="h4">{{object.settings.text}}</h4>
+        <h5 ng-switch-when="h5">{{object.settings.text}}</h5>
+        <h6 ng-switch-when="h6">{{object.settings.text}}</h6>
+    </div>
+

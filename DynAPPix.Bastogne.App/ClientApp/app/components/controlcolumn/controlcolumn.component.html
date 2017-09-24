@@ -1,0 +1,29 @@
+<div class="builder-col {{this['_Column Width'].value}} {{_ColumnOffset.value}}" [attr.data-index]="index">
+    <!--<div class="control-tool move-handle"
+          (mousedown)="emitMoveStart();" 
+          (mouseup)="emitMoveEnd();">
+        <i class="fa fa-window-minimize" aria-hidden="true"></i>
+    </div>-->
+    <!--<div id="w" class="w ui-resizable-handle ui-resizable-w">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </div>
+    <div id="e" class="e ui-resizable-handle ui-resizable-e">
+        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </div>-->
+
+    <div #column
+     [dragula]="'myBag'" 
+     [dragulaModel]='object.control' >
+        <div *ngFor="let Control of object.control"
+             draggable="true"
+             class="layout">
+            <span class="handle">+</span>
+            <ndc-dynamic [ndcDynamicComponent]="generateComponent(Control.controlTypeId, Control)"
+                         [ndcDynamicInputs]="generateInput(Control)">
+            </ndc-dynamic>
+        </div>
+    </div>
+</div>
+
+
+

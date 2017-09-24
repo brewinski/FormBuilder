@@ -1,0 +1,197 @@
+@{
+    ViewBag.Title = "Form Builder";
+}
+@section scripts {
+    @*<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+    <script src="~/js/formbuilder/formbuilder.js"></script>
+}
+<style>
+
+    /* Context Menu CSS */
+    #form-context-menu
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 300px;
+        background-color: #000000;
+        /*overflow-y: scroll;*/
+        height: 800px;
+    }
+
+    /* Form Builder CSS */
+
+    #edit-wrapper {
+        margin-left: 300px;
+        height: 100%;
+    }
+
+    .builder-col {
+        border: 1px dotted grey;
+        min-height: 79px;
+    }
+
+    form {
+        min-height: 79px;
+    }
+
+    .form-control {
+        border: 1px dotted;
+        lightgrey;
+    }
+
+    #edit-wrapper .row {
+        border: 1px groove orange;
+        min-height: 79px;
+    }
+
+    .control-hover {
+        box-shadow: 0 0 2px 2px #808080;
+    }
+
+    .toolbar {
+        display:none;
+    }
+</style>
+<div class="row text-center">
+    <h1>jQuery DynAPPix Forms Solution</h1>
+</div>
+<div id="form-context-menu">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1">Form Controls</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="col-md-12">
+                    <div id="draggable-control">
+                        <div class="form-group" tabindex="1" disabled>
+                            <label></label>
+                            <input type="datetime" class="form-control" />
+                            <span class="text-muted"></span>
+                        </div>
+                        <div class="form-group" tabindex="1">
+                            <label></label>
+                            <input class="form-control" />
+                            <span class="text-muted"></span>
+                        </div>
+                        <div class="form-group" tabindex="1">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Example block-level help text here.</p>
+                        </div>
+                        <div class="form-group" tabindex="1">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group" tabindex="1">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Option three is disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group" tabindex="1">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">Footer</div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Layout Controls</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="col-md-12">
+                            <button class="btn btn-danger" id="addrow">Add Row</button>
+                            <div id="draggable-col">
+                                <div class="sortable builder-col col-md-1" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-2" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-3" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-4" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-5" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-6" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-7" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-8" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-9" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-10" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-11" tabindex="1">
+
+                                </div>
+                                <div class="sortable builder-col col-md-12" tabindex="1">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* ------------------------- Control Area --------------------------- *@
+
+        @* ----------------------------------- Column Area ------------------------- *@
+    </div>
+</div>
+
+@* -------------------- Form Area --------------------- *@
+<form id="edit-wrapper">
+    <div class="row builder-row">
+        <div class="col-md-6 builder-col  sortable" tabindex="1">
+
+        </div>
+        <div class="col-md-6 builder-col sortable" tabindex="1">
+
+        </div>
+    </div>
+</form>

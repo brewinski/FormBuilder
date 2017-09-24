@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="">{{this['_Label Text'].value}}</label>
+    <select multiple class="form-control" [(ngModel)]="object.value">
+        <option *ngFor="let option of this['_Select Options'].value"
+                [ngValue]="option.value">
+            {{option.key}}
+        </option>
+    </select>
+</div>

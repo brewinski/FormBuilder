@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DynAPPix.Bastogne.Database.Deployer</id>
+    <title>Database deployer for Bastogne</title>
+    <version>1.0.0</version>
+    <authors>DynAPPix</authors>
+    <owners>DynAPPix</owners>
+    <licenseUrl>http://bastogne.azurewebsites.com/license</licenseUrl>
+    <projectUrl>http://bastogne.azurewebsites.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Database deployment scripts for the Bastogne application.</description>
+  </metadata>
+</package>

@@ -1,0 +1,13 @@
+<p>Post Data To Web Service</p>
+
+<div class="container-fluid">
+    <div class="form-group"></div>
+    <select class="form-control" [(ngModel)]="requestType" (blur)="setSettings()">
+        <option *ngFor="let type of requestTypes" [ngValue]="type">{{type}}</option>
+    </select>
+    <div class="form-group">
+        <input class="form-control" type="text" [(ngModel)]="serviceUrl" (blur)="setSettings()" />
+    </div>
+</div>
+
+<ng-template #makeselection>Please select a control</ng-template>

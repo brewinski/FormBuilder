@@ -1,0 +1,9 @@
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\bin\Debug\Dynappix.Bastogne.Database.dacpac
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\bin\Debug\Dynappix.Bastogne.Database.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\bin\Debug\Dynappix.Bastogne.Database.pdb
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\Model.xml
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\refactor.xml
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\postdeploy.sql
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\predeploy.sql
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\Dynappix.Bastogne.Database.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\Dynappix.Bastogne.Database\obj\Debug\Dynappix.Bastogne.Database.pdb

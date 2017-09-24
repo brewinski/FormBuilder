@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE14628B-0E2D-47E1-8AD9-672CC9D68DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynappix.Bastogne.UITest", "src\Dynappix.Bastogne.UITest\Dynappix.Bastogne.UITest.csproj", "{AB7DF996-BBED-4958-8152-3988ECDDC5B3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Dynappix.Bastogne.Database", "Dynappix.Bastogne.Database\Dynappix.Bastogne.Database.sqlproj", "{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{76C65072-ACB9-450D-B9E0-BAB95AF8D555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynappix.Bastogne.Database.Deployer", "Dynappix.Bastogne.Database.Deployer\Dynappix.Bastogne.Database.Deployer.csproj", "{8E66D0DA-D634-4A05-8B4C-E6E522444123}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynappix.Bastogne.App", "DynAPPix.Bastogne.App\Dynappix.Bastogne.App.csproj", "{58603312-03E6-437A-8F9A-74B0358737C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D43FAF7-82C0-4368-BEFF-11FC14BD80D4}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\ProductInfo.cs = Solution Items\ProductInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7DF996-BBED-4958-8152-3988ECDDC5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7DF996-BBED-4958-8152-3988ECDDC5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7DF996-BBED-4958-8152-3988ECDDC5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7DF996-BBED-4958-8152-3988ECDDC5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8E66D0DA-D634-4A05-8B4C-E6E522444123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E66D0DA-D634-4A05-8B4C-E6E522444123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E66D0DA-D634-4A05-8B4C-E6E522444123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E66D0DA-D634-4A05-8B4C-E6E522444123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58603312-03E6-437A-8F9A-74B0358737C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58603312-03E6-437A-8F9A-74B0358737C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58603312-03E6-437A-8F9A-74B0358737C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58603312-03E6-437A-8F9A-74B0358737C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABF06CD9-9452-420C-AC9B-D8BBFA15953E} = {76C65072-ACB9-450D-B9E0-BAB95AF8D555}
+		{8E66D0DA-D634-4A05-8B4C-E6E522444123} = {76C65072-ACB9-450D-B9E0-BAB95AF8D555}
+		{58603312-03E6-437A-8F9A-74B0358737C4} = {DE14628B-0E2D-47E1-8AD9-672CC9D68DB4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dynappix.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\Dynappix.Bastogne.UITest\\Dynappix.Bastogne.UITest.csproj
+		SccProjectName1 = src/Dynappix.Bastogne.UITest
+		SccLocalPath1 = src\\Dynappix.Bastogne.UITest
+		SccProjectUniqueName2 = Dynappix.Bastogne.Database.Deployer\\Dynappix.Bastogne.Database.Deployer.csproj
+		SccProjectTopLevelParentUniqueName2 = Dynappix.Bastogne.sln
+		SccProjectName2 = Dynappix.Bastogne.Database.Deployer
+		SccLocalPath2 = Dynappix.Bastogne.Database.Deployer
+		SccProjectUniqueName3 = Dynappix.Bastogne.Database\\Dynappix.Bastogne.Database.sqlproj
+		SccProjectTopLevelParentUniqueName3 = Dynappix.Bastogne.sln
+		SccProjectName3 = Dynappix.Bastogne.Database
+		SccLocalPath3 = Dynappix.Bastogne.Database
+		SccProjectUniqueName4 = DynAPPix.Bastogne.App\\Dynappix.Bastogne.App.csproj
+		SccProjectTopLevelParentUniqueName4 = Dynappix.Bastogne.sln
+		SccProjectName4 = DynAPPix.Bastogne.App
+		SccLocalPath4 = DynAPPix.Bastogne.App
+	EndGlobalSection
+EndGlobal

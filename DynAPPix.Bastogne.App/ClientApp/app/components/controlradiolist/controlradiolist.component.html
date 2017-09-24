@@ -1,0 +1,10 @@
+<fieldset class="form-group">
+    <label for="">{{this['_Label Text'].value}}</label>
+    <div class="form-check" 
+         *ngFor="let option of this['_Select Options'].value" >
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" value="option.value" id="optionsRadios1" checked>
+            {{option.key}}
+        </label>
+    </div>
+</fieldset>

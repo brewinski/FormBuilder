@@ -1,0 +1,25 @@
+<div class="wrapper fillArea">
+	<app-header>LOADING header...</app-header>
+
+	<app-menu-aside [links]="mylinks">LOADING menu...</app-menu-aside>
+
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper fillArea">
+		<!-- Content Header (Page header) -->
+		<app-breadcrumb></app-breadcrumb>
+
+		<!-- Main content -->
+		<section class="content fillArea">
+			<!--<div class="box box-default fillArea">
+				<div class="box-body fillArea">-->
+					<router-outlet></router-outlet>
+				<!--</div>-->
+			<!-- </div> -->
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+	<!--<app-footer>LOADING footer...</app-footer>-->
+	<app-aside>LOADING control sidebar...</app-aside>
+</div>
+<!-- ./wrapper -->

@@ -1,0 +1,51 @@
+<!-- Main Header -->
+<header class="main-header">
+	<!-- Logo -->
+	<a href="#" routerLink="/" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
+		<span class="logo-mini"><b>D</b></span> <!-- logo for regular state and mobile devices -->
+		<span class="logo-lg"><b>CloudForms</b></span>
+	</a>
+	<!-- Header Navbar -->
+	<nav class="navbar navbar-static-top" role="navigation">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
+			role="button"> <span class="sr-only">Toggle navigation</span>
+		</a>
+        <ul class="nav navbar-nav mr-auto d-md-down-none">
+            <li class="nav-item">
+                <a class="nav-link" href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+            </li>
+            <!--<li>
+                <a class="nav-link" (click)="createFormClick();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Form</a>
+            </li>-->
+            <li role="presentation" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus"></span> New <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="nav-link" (click)="createFormClick();">Form</a>
+                    </li>
+                    <li>
+                        <a>Connector</a>
+                    </li>
+                </ul>
+                <!--<button type="button" class="btn btn-default" (click)="createFormClick();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New</button>-->
+            </li>
+        </ul>
+		<!-- Navbar Right Menu -->
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav" >
+				<!-- Messages: style can be found in dropdown.less-->
+				<!--<li class="dropdown messages-menu messagesBox"></li>-->
+				<!-- Notifications Menu -->
+				<!--<li class="dropdown notifications-menu notificationsBox"></li>-->
+				<!-- Tasks Menu -->
+				<!--<li class="dropdown tasks-menu tasksBox"></li>-->
+				<!-- User Account Menu -->
+                <li class="nav-item dropdown user user-menu userBox"></li>
+                <!-- Control Sidebar Toggle Button -->
+                <li><a href="#" data-toggle="control-sidebar"
+					class="toggle-sidebar-right" role="button"><i class="fa fa-gears"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-6">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Form Control Name</th>
+                    <th>Design Notes</th>
+                    <th>External Data Required</th>
+                    <th>Control Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let control of controls">
+                    <tr *ngIf="control._settings?._ControlName">
+                        <td><span *ngIf="control._settings?._ControlName">{{control._settings._ControlName}}</span></td>
+                        <td><span *ngIf="control._settings?._DesignNotes">{{control._settings._DesignNotes}}</span></td>
+                        <td><span *ngIf="control._settings?._ExternalDataRequired">{{control._settings._ExternalDataRequired}}</span></td>
+                        <td><span *ngIf="control.controlTypeId">{{control.controlTypeId}}</span></td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-6 builder-section">
+        <form-renderer #formrenderer [formid]="id"></form-renderer>
+    </div>
+</div>

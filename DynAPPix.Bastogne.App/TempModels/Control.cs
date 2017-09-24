@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Dynappix.Bastogne.App.TempModels
+{
+    public partial class Control
+    {
+        public Guid ControlId { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public string CreatedId { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public string UpdatedId { get; set; }
+        public string Name { get; set; }
+        public string Settings { get; set; }
+        public string ControlTypeId { get; set; }
+        public Guid? PartialId { get; set; }
+        public Guid? ParentControlId { get; set; }
+        public int? Order { get; set; }
+
+        public virtual Control ParentControl { get; set; }
+        public virtual ICollection<Control> InverseParentControl { get; set; }
+        public virtual PartialForm Partial { get; set; }
+    }
+}

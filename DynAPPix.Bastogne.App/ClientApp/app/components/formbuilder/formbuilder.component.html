@@ -1,0 +1,21 @@
+<div class="row fillArea">
+    <div [ngClass]="!rulesUrl ? 'col-md-3 col-sm-2 col-xs-1' : 'col-md-6 col-sm-6 col-xs-6'" class=" main-nav " style="height: 775px;">
+        <router-outlet></router-outlet>
+    </div>
+    <div id="builder-section" [ngClass]="!rulesUrl ? 'col-sm-9 col-sx-11' : 'col-sm-6 col-sx-6'" >
+        <div class="nav-tabs-custom">
+            <formbuilder-header #formnav
+                                (NavigateToToolbox)="testOutputs($event)"
+                                (NavigateToRules)="testOutputs($event)"
+                                (SendImplementationEmail)="formrenderer.test()"
+                                (SaveForm)="formrenderer.saveForm();">
+            </formbuilder-header>
+            <div class="tab-content fillArea builder-section make-scrollable">
+                <div class="tab-pane active" id="tab_1-1">
+                    <form-renderer #formrenderer [formid]="id"></form-renderer>
+                </div>
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </div>
+</div>

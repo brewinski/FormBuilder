@@ -1,0 +1,61 @@
+<!--<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='btn navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>-->
+            <!--<button type="button"><span class="glyphicon glyphicon-home">Home</span></button>-->
+            <!--<button class="btn btn-default btn-sm pull-right" type="button"><span class="glyphicon glyphicon-log-out"></span></button>
+            <a class='navbar-brand' [routerLink]="['/home']">DynAPPix Bastogne</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logoutClick();">
+                        <span class="glyphicon glyphicon-log-out"></span> Logout 
+                    </a>
+                </li>
+            </ul>
+        </div>-->
+        <!--<div class='clearfix'></div>-->
+        <!--<div class='navbar-collapse collapse'>
+            <p class="navbar-text"><span class='glyphicon glyphicon-th-list'></span> Forms</p>
+            <button class="btn btn-default btn-sm pull-right" type="button" (click)="createFormClick();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="[link-active]">
+                    <a *ngFor="let form of forms"
+                       [routerLink]="['/formbuilder', form.partialId]">
+                        {{ form.name }}
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>-->
+
+    
+    <div class='navbar-collapse collapse'>
+        <!--<p class="navbar-text"><span class='glyphicon glyphicon-th-list'></span> Forms</p>
+        <button class="btn btn-default btn-sm pull-right" type="button" (click)="createFormClick();"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>-->-->
+    <ul class='nav navbar-nav'>
+        <li [routerLinkActive]="[link-active]">
+            <a *ngFor="let form of forms"
+               [routerLink]="['/formbuilder', form.partialId]">
+                {{ form.name }}
+            </a>
+        </li>
+    </ul>
+    </div>

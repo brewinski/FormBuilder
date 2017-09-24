@@ -1,0 +1,23 @@
+<div *ngIf="dataLoaded" 
+     class="container-fluid" 
+     [dragula]="'myBag'" 
+     [dragulaModel]='form.control'
+     id="formrenderer"
+     #formrenderer>
+    <div *ngFor="let Control of form.control" 
+         draggable="true" 
+         class="layout">
+        <span class="handle">+</span>
+        <ndc-dynamic [ndcDynamicComponent]="generateComponent(Control.controlTypeId, Control)" 
+                     [ndcDynamicInputs]="generateInput(Control)">
+        </ndc-dynamic>
+    </div>
+</div>
+<div style="position:fixed; top:0; display:none;">
+    <canvas style="" class="mycanvas" name="mycanvas" id="mycanvas" #mycanvas></canvas>
+</div>
+<div class="box" *ngIf="!dataLoaded" style="height:700px; border: none;">
+    <div *ngIf="!dataLoaded" class="overlay">
+        <i class="fa fa-refresh fa-spin"></i>
+    </div>
+</div>

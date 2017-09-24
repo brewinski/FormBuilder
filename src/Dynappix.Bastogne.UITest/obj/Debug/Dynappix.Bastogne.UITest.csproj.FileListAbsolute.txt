@@ -1,0 +1,5 @@
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\src\Dynappix.Bastogne.UITest\bin\Debug\Dynappix.Bastogne.UITest.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\src\Dynappix.Bastogne.UITest\bin\Debug\Dynappix.Bastogne.UITest.pdb
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\src\Dynappix.Bastogne.UITest\obj\Debug\Dynappix.Bastogne.UITest.csprojResolveAssemblyReference.cache
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\src\Dynappix.Bastogne.UITest\obj\Debug\Dynappix.Bastogne.UITest.dll
+C:\dev\Dynappix\DynAPPix Forms\Dynappix.Bastogne\src\Dynappix.Bastogne.UITest\obj\Debug\Dynappix.Bastogne.UITest.pdb

@@ -1,0 +1,14 @@
+{
+  "name": "@dynappix/dyn-admin-lte",
+  "version": "1.0.0",
+  "description": "Fixed AdminLTE JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adminlte"
+  ],
+  "author": "DynAPPix",
+  "license": "ISC"
+}

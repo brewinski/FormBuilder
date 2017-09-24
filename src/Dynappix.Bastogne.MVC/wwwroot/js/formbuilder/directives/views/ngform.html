@@ -1,0 +1,71 @@
+﻿<div class="row">
+    <div class="col-md-3">
+        <div id="settingspanel" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Control Settings</h3>
+            </div>
+            <div class="panel-body">
+                <ngsettingsrenderer settings="FormInformation.focusedObject.settings"></ngsettingsrenderer>
+            </div>
+            <div class="panel-footer">
+            </div>
+        </div>
+        <div id="controlspanel" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Controls</h3>
+            </div>
+            <div class="panel-body">
+                <ul ng-repeat="item in vm.List">
+                    <li class="bs-callout bs-callout-danger" dnd-draggable="item"
+                        dnd-effect-allowed="copy"
+                        dnd-copied="item.controlId = item.controlId + 1">
+                        <h4>{{item.controlTypeId}}</h4>
+                        <p>This is a control</p>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="panel-footer">
+                <ul dnd-list="[]">
+                    <li class="bs-callout bs-callout-warning"><h4>Trash</h4></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" ng-click="vm.editToggle = !vm.editToggle" title="Popover title" data-content="Hey">Toggle edit</button>
+        <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" ng-click="vm.CreateForm()" title="Popover title" data-content="Hey">Save</button>
+    </div>
+    <div class="col-md-9" id="formBuilder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Canvas</h3>
+                <div class="form-group">
+                    <label>Form Name</label>
+                    <input type="text" ng-model="vm.form.name" />
+                </div>
+            </div>
+            <div class="panel-body" style="height: 800px; overflow-y:scroll;">
+                <form id="edit-wrapper"
+                      ng-if="vm.dataLoaded">
+                    <div class="col-md-12" id="formBuilder">
+                        <div>Selected Object: {{FormInformation.focusedObject.controlId}}</div>
+                        <ul class="editpane"
+                            dnd-list="vm.form.control"
+                            dnd-disable-if="isbuilder == false">
+                            <li ng-repeat="control in vm.form.control"
+                                item-generator type="control.controlTypeId"
+                                object="control"
+                                controllist="vm.List"
+                                isbuilder="vm.editToggle"
+                                dnd-draggable="control"
+                                dnd-effect-allowed="move"
+                                dnd-moved="vm.form.control.splice($index, 1)"
+                                draggable="vm.editToggle"
+                                ng-click="setFocusedObject(control); $event.stopPropagation();">
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

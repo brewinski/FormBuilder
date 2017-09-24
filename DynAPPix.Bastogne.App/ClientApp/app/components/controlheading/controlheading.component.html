@@ -1,0 +1,9 @@
+<div [ngSwitch]="this['_Heading Size'].value">
+    <h1 *ngSwitchCase="'h1'">{{this["_Heading Text"].value}}</h1>
+    <h2 *ngSwitchCase="'h2'">{{this["_Heading Text"].value}}</h2>
+    <h3 *ngSwitchCase="'h3'">{{this["_Heading Text"].value}}</h3>
+    <h4 *ngSwitchCase="'h4'">{{this["_Heading Text"].value}}</h4>
+    <h5 *ngSwitchCase="'h5'">{{this["_Heading Text"].value}}</h5>
+    <h6 *ngSwitchCase="'h6'">{{this["_Heading Text"].value}}</h6>
+    <h1 *ngSwitchDefault><span *ngIf="this['_Heading Text'].value">{{this["_Heading Text"].value}}</span><span *ngIf="!this['_Heading Text'].value">Sample Heading</span></h1>
+</div>

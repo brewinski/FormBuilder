@@ -1,0 +1,238 @@
+﻿
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: lightgrey;
+  min-height: 90%;
+  height: 90%;
+}
+
+h1 h2 h3 h4{
+    background-color: gray;
+}
+
+#main {
+    padding-bottom: 55px;
+    padding-top: 65px;
+    position: relative;
+    height: 100% ;
+    min-height: 100%;
+    max-height:100%;
+    height: 100%;
+}
+
+.profileimage {
+    max-width: 52px;
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.menu {
+    font-size: 12px;
+}
+
+    .menu li {
+        list-style-type: none;
+    }
+
+        .menu li.active {
+            font-weight: bold;
+        }
+
+#sidebar {
+    background: #375a7f;
+    opacity: 0.75;
+    color: #eee;
+    position: fixed;
+    height: 100%;
+    width: 52px;
+    overflow: hidden;
+    left: 0;
+    z-index: 3;
+    -moz-transition: left ease .25s;
+    -o-transition: left ease .25s;
+    -webkit-transition: left ease .25s;
+    transition: left ease .25s;
+    transition: width ease .25s;
+}
+
+    #sidebar span {
+        opacity: 0;
+        -moz-transition: opacity ease-in-out .5s;
+        -o-transition: opacity ease-in-out .5s;
+        -webkit-transition: opacity ease-in-out .5s;
+        transition: opacity ease-in-out .5s;
+    }
+
+    #sidebar li {
+        border-bottom: 1px solid black; 
+    }
+
+    #sidebar li i {
+        margin-right: 18px;
+    }
+
+    #sidebar li i {
+        color: #eee;
+        -moz-transition: color ease-in-out 1s;
+        -o-transition: color ease-in-out 1s;
+        -webkit-transition: color ease-in-out 1s;
+        transition: color ease-in-out 1s;
+    }
+
+    /*Hiding the side bar on hover*/
+    #sidebar.show-sidebar {
+        width: 250px;
+        -webkit-box-shadow: 15px 0 8px 0px rgba(0,0,0,0.3);
+        box-shadow: 15px 0 8px 0px rgba(0,0,0,0.3);
+    }
+
+        #sidebar.show-sidebar span {
+            opacity: 1;
+        }
+
+
+        #sidebar.show-sidebar li i {
+            
+        }
+
+        #sidebar a {
+            color:white;            
+        }
+
+#wrapper {
+    margin-top: 45px;
+    margin-bottom: 85px;
+    -moz-transition: margin-left ease .25s;
+    -o-transition: margin-left ease .25s;
+    -webkit-transition: margin-left ease .25s;
+    transition: margin-left ease .25s;
+}
+
+    #wrapper.show-sidebar {
+        margin-left: 250px;
+    }
+
+
+#sidebar.hide-sidebar {
+    left: -250px;
+    transition: left ease .25s;
+}
+
+#wrapper.hide-sidebar {
+    transition: margin-left ease .25s;
+}
+
+#wrapper.show-sidebar {
+    margin-left: 250px;
+    transition: margin-left ease .25s;
+}
+
+#testing input {
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+    #testing input.active {
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    }
+
+
+/*Bootstrap Callouts*/
+
+.bs-callout {
+    padding: 2px;
+    padding-left: 10px;
+    margin: 2px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+    .bs-callout h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .bs-callout p:last-child {
+        margin-bottom: 0;
+    }
+
+    .bs-callout code {
+        border-radius: 3px;
+    }
+
+    .bs-callout + .bs-callout {
+        margin-top: -5px;
+    }
+
+.bs-callout-default {
+    border-left-color: #777;
+}
+
+    .bs-callout-default h4 {
+        color: #777;
+    }
+
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+
+    .bs-callout-primary h4 {
+        color: #428bca;
+    }
+
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+
+    .bs-callout-success h4 {
+        color: #5cb85c;
+    }
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+
+    .bs-callout-danger h4 {
+        color: #d9534f;
+    }
+
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+
+    .bs-callout-warning h4 {
+        color: #f0ad4e;
+    }
+
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+
+    .bs-callout-info h4 {
+        color: #5bc0de;
+    }
+
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0px;
+}
+
+#controlspanel {
+    max-height: 40%;
+    overflow:scroll
+}
+
+#settingspanel {
+    max-height: 40%;
+    overflow: scroll;
+}

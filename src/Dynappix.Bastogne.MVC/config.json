@@ -1,0 +1,12 @@
+{
+  "MailSettings": {
+    "ToAddress": "cbrewin93@gmail.com",
+  },
+  "ConnectionStrings": {
+    "WorldContextConnection": "Server=(localdb)\\MSSqlLocalDB;Database=TheWorldDb;Trusted_Connection=true;MultipleActiveResultSets=true",
+    "FormsServiceUrl":  "http://localhost:50759/api/PartialForms/"
+  },
+  "Keys": {
+    "BingKey": "DONTEVERPUTKEYSINSOURCECONTROL"
+  }
+}

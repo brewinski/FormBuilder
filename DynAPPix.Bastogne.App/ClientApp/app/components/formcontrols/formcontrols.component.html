@@ -1,0 +1,22 @@
+<ul>
+    <li class="treeview active" (click)="toggleMenu($event);" *ngFor="let catagory of Catagories">
+        <a href="javascript:void(0)">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+            <span>{{catagory.catagoryName}}</span>
+            <!--<i class="fa fa-angle-left pull-right"></i>-->
+        </a>
+        <ul class="treeview-menu"
+            [dragula]='"myBag"'
+            [dragulaModel]='catagory.controls'
+            id='controls'>
+            <li *ngFor="let Control of catagory.controls"
+                draggable="true"
+                class="layout list-unstyled" style="padding:5px;" [attr.data-id]="-1">
+                <a>
+                    <!--<span class="handle">+</span>-->
+                    {{getDisplayName(Control, catagory)}}
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,33 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "underscore": "~1.8.3",
+    "jquery-validation": "~1.15.0",
+    "jquery-validation-unobtrusive": "~3.2.6",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "bootswatch": "3.3.5+2",
+    "angular": "1.5.8",
+    "angular-ui-sortable": "0.14.0",
+    "angular-bootstrap": "2.1.1",
+    "breeze-client": "1.5.11",
+    "angular-accordion": "0.1.0",
+    "angular-drag-and-drop-lists": "1.4.0",
+    "ckeditor": "4.5.7",
+    "angular-formly": "8.2.0"
+  },
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wwwroot/lib",
+    "test",
+    "tests"
+  ]
+}
